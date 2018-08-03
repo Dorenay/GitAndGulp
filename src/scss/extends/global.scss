@@ -1,0 +1,55 @@
+.green-line{
+    width: 70px;
+    border: 1px solid #8eb640;;
+}
+.button{
+    padding: 8px 15px;    
+    font-size: 18px;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+a.button{
+    text-decoration: none;
+    &--style2{
+        &:hover{
+            color: #fff;
+        }
+    }
+}
+
+.button--style1{
+    color: rgb(119, 119, 119);
+    background-color: #eee;
+    transition: 1s;
+    &:hover{
+        background-color: #72a411;
+        color: #fff;        
+    }
+}
+.button--style2{
+    color: #fff;
+    background-color: #72a411;
+    transition: 1s;
+    &:hover{
+        background-color: #51740d;
+    }
+}
+.section--bg-mask{
+    position: relative;
+    &::before{
+        display: block;
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #000000, $alpha: 0.6);
+        top: 0;
+        left: 0;
+    }
+    &>*{
+        position: relative;
+        z-index: 2;
+    }
+}

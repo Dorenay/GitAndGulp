@@ -1,0 +1,56 @@
+.dish-element{
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 30px;
+    cursor: pointer;
+    &::before{
+        content: '';
+        position: absolute;
+        left: 22px;
+        top: 7px;
+        right: 22px;
+        bottom: 7px;
+        border: 1px solid white;
+    }
+    img{
+        width: 100%;
+        -o-object-fit: cover;
+        height: 100%;
+        object-fit: cover;
+        box-sizing: border-box;
+    }
+    &__name{
+        display: flex;
+        visibility: hidden;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: calc(100% - 30px);
+        height: 100%;
+        margin-left: 15px;
+        background-color: rgba(0,0,0,.0);
+        top: 0;
+        left: 0;
+        transition: 1s;
+        h4{
+            margin-top: 150px;
+            color: #fff;
+            font-size: 24px;
+            opacity: 0;
+            text-transform: uppercase;
+            font-weight: normal;           
+            transition: 1s;
+        }
+    }
+    &:hover{
+        .dish-element__name{        
+            visibility: visible;   
+            background-color: rgba(0,0,0,.7);
+            h4{
+                margin-top: 0px;
+                opacity: 1;
+            }
+        }
+    }   
+}
